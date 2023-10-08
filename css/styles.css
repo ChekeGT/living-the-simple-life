@@ -198,3 +198,40 @@ p{
     width: 100%;
     height: 60px;
 }
+
+/* Recent posts */
+
+#recent-posts{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #FFFFFF;
+    border: 20px solid #EBEBEB;                                                                                                        
+}
+#recent-posts h2{
+    margin-bottom: 1rem;
+    color: #143774;
+    font-family: Lora, Regular;
+    font-weight: 600;
+}
+
+.recent-post-image img{
+    object-fit: cover;
+    height: 80px;
+}
+.recent-post{
+    border-bottom: 1px solid #707070;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    width: 91%;
+    margin: 0 auto;
+}
+.recent-post h3{
+    color: #143774;
+    font-family: Lora, Regular;
+    font-weight: 500;
+    margin-top: 1rem
+}
+.recent-post:last-of-type{
+    border-bottom: none;
+}
