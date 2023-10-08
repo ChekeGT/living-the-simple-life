@@ -168,3 +168,33 @@ p{
     font-family: Ubuntu, sans-serif;
     font-size: 1.2rem;
 }
+
+/* About me section */
+#about-me{
+    background-color: #EBEBEB;
+}
+#about-me article{
+    display: flex;
+    width: 90%;
+    background-color: #FFFFFF;
+    margin: 1rem auto;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+#about-me h3{
+    font-family: Lora, Regular;
+    font-weight: 600;
+    color: #143774;
+    letter-spacing: 1px;
+}
+#about-me p{
+    font-family: Ubuntu, sans-serif;
+    font-weight: normal;
+    color: #143774;
+}
+#about-me img{
+    object-fit: cover;
+    width: 100%;
+    height: 60px;
+}
