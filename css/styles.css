@@ -91,7 +91,7 @@ p{
 
 /*  Media queries for nav */
 
-@media (min-width: 625px){
+@media (min-width: 750px){
     .container{
         flex-direction: row;
         justify-content: space-around;
@@ -115,8 +115,8 @@ p{
     gap: 1rem;
 }
 #posts{
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 .second-row{
@@ -125,6 +125,20 @@ p{
     background-color: #FFFFFF;
     width: 100%;
     gap: 2rem;
+}
+
+/* Media queries for main */
+
+@media (min-width: 750px){
+    #main-content{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        margin-top: 2.5rem;
+        gap: 5rem;
+    }
+    .second-row{
+        gap: 5rem;
+    }
 }
 
 /* Post */
@@ -169,6 +183,38 @@ p{
     font-size: 1.2rem;
 }
 
+/* Media queries for post */
+@media (min-width: 750px){
+    .post:not(:first-of-type){
+        display: grid;
+        grid-template-columns: 2.2fr 9fr;
+        align-items: flex-start;
+    }
+    .post:not(:first-of-type) figure{
+        display: grid;
+        grid-template-rows: 9fr 1fr;
+        max-height: 250px;
+        min-width: 130px;
+    }
+    .post:not(:first-of-type) figure img{
+        height: 100%;
+        object-fit: cover;
+    }
+    #posts{
+        margin-bottom: 5rem;
+    }
+    .post:first-of-type{
+        margin-bottom: 2rem;
+    }
+    .post:first-of-type figure{
+        width: 100%;
+    }
+    .post:first-of-type img{
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
 /* About me section */
 #about-me{
     background-color: #EBEBEB;
@@ -190,13 +236,34 @@ p{
 }
 #about-me p{
     font-family: Ubuntu, sans-serif;
-    font-weight: normal;
+    font-weight: lighter;
     color: #143774;
 }
 #about-me img{
     object-fit: cover;
     width: 100%;
     height: 60px;
+}
+
+/* Media queries for about-me section */
+@media (min-width: 500px){
+    #about-me img{
+        min-height: 150px;
+    }
+}
+@media (min-width: 750px){
+    #about-me img{
+        height: auto;
+        justify-self: center;
+        min-width: 150px;
+        object-fit: cover;
+    }
+    #about-me article{
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
 }
 
 /* Recent posts */
@@ -206,7 +273,8 @@ p{
     flex-direction: column;
     gap: 1.5rem;
     background-color: #FFFFFF;
-    border: 20px solid #EBEBEB;                                                                                                        
+    border: 20px solid #EBEBEB;
+    padding: 1rem 0.5rem;            
 }
 #recent-posts h2{
     margin-bottom: 1rem;
@@ -217,13 +285,14 @@ p{
 
 .recent-post-image img{
     object-fit: cover;
-    height: 80px;
+    max-height: 90px;
+    min-width: 180px
 }
 .recent-post{
     border-bottom: 1px solid #707070;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    width: 91%;
+    width: 100%;
     margin: 0 auto;
 }
 .recent-post h3{
@@ -235,7 +304,11 @@ p{
 .recent-post:last-of-type{
     border-bottom: none;
 }
-
+@media (min-width: 500px) and (max-width: 750px){
+    .recent-post-image img{
+        min-height: 150px;
+    }
+}
 /* Footer */
 footer{
     background-color: #143774;
