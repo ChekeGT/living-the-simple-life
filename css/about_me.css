@@ -1,0 +1,9 @@
+.post-text p.subtitle{
+    color: #1792D2;
+    font-family: Lora, sans-serif;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+.post:first-of-type{
+    border-bottom: none;
+}
